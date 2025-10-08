@@ -1,4 +1,64 @@
+# iOS SwiftUI Agent Prompt
+
+## Overv## Very Specific Dial Design (Match This Exact## Features & Architecture
+
+### Tech Stack
+- **Swift 6.2, iOS 17+**
+- **SwiftUI, Combine, MVVM**
+
+### Components
+**Views:**
+- `ContentView`
+- `DialView` (Canvas + Timeline/DisplayLink)
+- `ControlBar`
+- `SettingsView`
+
+**Models:**
+- `PomodoroPhase`
+- `PomodoroSettings` (focus/short/long/cyclesToLong/accentColor)
+- `PomodoroTimerState`
+
+### Features
+**Controls:**
+- Start / Pause / Resume / Reset / Next phase
+- Presets: 25/5, 50/10, Custom
+- Every 4 focus sessions ⇒ long break
+- Optional auto-advance
+
+**Persistence:**
+- AppStorage/UserDefaults
+- Recompute by timestamps after backgrounding (no drift)
+
+**Notifications & Feedback:**
+- UNUserNotificationCenter on phase end
+- Haptics: subtle UINotificationFeedbackGenerator
+
+**Theming:**
+- Dark/light mode support
+- ColorPicker for accent (persist)
+
+**Accessibility:**
+- VoiceOver ("Time remaining X minutes Y seconds")
+- Contrast AA complianceis **not** a plain HH:MM clock. It's a mechanical-style dial with two concentric, continuously rotating carousels of numerals and fixed selector windows:w
 You are an expert iOS/SwiftUI agent (Swift 6.2, iOS 17+).
+
+## Repository Structure
+This is a monorepo organized as follows:
+```
+appomodoro/                 # root GitHub repo
+  README.md
+  .gitignore               # monorepo-safe (see rules below)
+  .gitattributes
+  IOS/
+    Claude45/              # Current AI agent working folder
+      appomodoro/          # Xcode project
+    Gemini25/              # Future AI agent folder
+    GPT5-Codex/            # Future AI agent folder
+  Android-Kotlin/          # Future platform tests
+  Windows-Flutter/         # Future platform tests
+```
+
+**Important**: Do not create projects outside your assigned subfolder. Modify the existing Xcode project in your designated folder in place.expert iOS/SwiftUI agent (Swift 6.2, iOS 17+).
 I’m organizing a monorepo like this:
 pomodoro/                 # root GitHub repo (I will push this)
   README.md
@@ -9,32 +69,55 @@ pomodoro/                 # root GitHub repo (I will push this)
   android-.../            # (other agents later)
   windows-.../            # (other agents later)
 Do not create projects outside your assigned subfolder. Modify the existing Xcode project in ios-<agent-name>/ in place.
-Goals
-Implement the Pomodoro timer with the specific dial UI (two concentric rotating number rings) at 60 fps with continuous motion for seconds & minutes.
-Ensure the project builds from terminal using xcodebuild. If anything fails, fix it until the build succeeds cleanly (no errors; minimize warnings).
-Produce a correct Git layout so the repo never syncs empty and no secrets are committed.
+## Goals
+1. **Implement the Pomodoro timer** with the specific dial UI (two concentric rotating number rings) at 60 fps with continuous motion for seconds & minutes
+2. **Ensure terminal build compatibility** using xcodebuild - fix all build failures and minimize warnings
+3. **Maintain proper Git structure** so the repo never syncs empty and no secrets are committed
 Very specific dial design (match this exactly)
 This is not a plain HH:MM clock. It’s a mechanical-style dial with two concentric, continuously rotating carousels of numerals and fixed selector windows:
-Look: black/graphite background; high-contrast ticks & numerals; accent color on active elements. Typography: SF Pro Rounded for large digits.
-Outer ring — Seconds: numerals 00–59 evenly spaced around the circumference.
-The entire seconds ring rotates smoothly clockwise, one full revolution every 60 seconds.
-A fixed rounded-rect “selector window” on the LEFT reveals whichever second passes under it; that is the current second. No stepping; motion is continuous.
-Inner ring — Minutes: numerals 00–59 on a slightly smaller radius.
-The entire minutes ring rotates smoothly clockwise, one full revolution every 60 minutes.
-A fixed selector window on the RIGHT reveals the current minute. The minute value slides continuously as seconds progress.
-Center readout: large two-digit minutes remaining on the left (e.g., 07) and a small oval badge for two-digit seconds on its right (e.g., 44), using the accent color.
-Ticks: outer 60-tick scale (longer every 5); optional lighter inner ticks to match the reference.
-Motion model: angle = linear function of timestamps with sub-second precision.
-Seconds ring: 1 turn / 60s.
-Minutes ring: 1 turn / 3600s (so minutes glide, not jump).
-Viewport metaphor: selector windows are fixed; the rings rotate beneath them.
-Rendering: Prefer Canvas + TimelineView(.animation, cadence: .live); if stutter occurs, add a CADisplayLink publisher for display-rate updates. Do not use 1-second timers for drawing.
-Geometry / math (implement precisely)
+### Visual Specifications
+- **Look**: Black/graphite background; high-contrast ticks & numerals; accent color on active elements
+- **Typography**: SF Pro Rounded for large digits
+
+### Ring Structure
+**Outer Ring — Seconds:**
+- Numerals 00–59 evenly spaced around the circumference
+- Entire seconds ring rotates smoothly clockwise, one full revolution every 60 seconds
+- Fixed rounded-rect "selector window" on the **LEFT** reveals current second
+- **No stepping; motion is continuous**
+
+**Inner Ring — Minutes:**
+- Numerals 00–59 on a slightly smaller radius
+- Entire minutes ring rotates smoothly clockwise, one full revolution every 60 minutes
+- Fixed selector window on the **RIGHT** reveals current minute
+- Minute value slides continuously as seconds progress
+
+**Center Readout:**
+- Large two-digit minutes remaining on the left (e.g., `07`)
+- Small oval badge for two-digit seconds on its right (e.g., `44`), using the accent color
+
+**Ticks:**
+- Outer 60-tick scale (longer every 5)
+- Optional lighter inner ticks to match the reference
+
+### Motion Model
+- **Angle = linear function of timestamps** with sub-second precision
+- **Seconds ring**: 1 turn / 60s
+- **Minutes ring**: 1 turn / 3600s (so minutes glide, not jump)
+- **Viewport metaphor**: selector windows are fixed; the rings rotate beneath them
+
+### Rendering Requirements
+- **Prefer**: Canvas + TimelineView(.animation, cadence: .live)
+- **If stutter occurs**: add a CADisplayLink publisher for display-rate updates
+- **Do NOT use**: 1-second timers for drawing
+## Geometry / Math (Implement Precisely)
+```swift
 let now = timeline.date.timeIntervalSinceReferenceDate
 let elapsed = isRunning ? now - startedAt - accumulatedPause : lastPausedElapsed
 let secondsFrac = elapsed.truncatingRemainder(dividingBy: 60)           // 0..<60
 let thetaSeconds = -Double.pi/2 + 2*Double.pi * (secondsFrac / 60.0)    // 1 turn/60s
 let thetaMinutes = -Double.pi/2 + 2*Double.pi * ((elapsed / 60.0) / 60) // 1 turn/3600s
+```
 Features & Architecture
 Swift 6.2, iOS 17+, SwiftUI, Combine, MVVM.
 Views: ContentView, DialView (Canvas + Timeline/DisplayLink), ControlBar, SettingsView.
@@ -44,8 +127,10 @@ Persistence: AppStorage/UserDefaults. Recompute by timestamps after backgroundin
 Notifications: UNUserNotificationCenter on phase end. Haptics: subtle UINotificationFeedbackGenerator.
 Theming: dark/light + ColorPicker for accent (persist).
 Accessibility: VoiceOver (“Time remaining X minutes Y seconds”), contrast AA.
-Build from terminal (must pass)
-Create build_and_verify.sh in your iOS subfolder:
+## Build from Terminal (Must Pass)
+Create `build_and_verify.sh` in your iOS subfolder:
+
+```bash
 #!/usr/bin/env bash
 set -euo pipefail
 xcodebuild \
@@ -55,12 +140,16 @@ xcodebuild \
   -quiet \
   clean build
 echo "✅ xcodebuild completed successfully."
-If the scheme/target name differs, update it. Fix any code/config so this script succeeds.
-Git & Monorepo rules (avoid empty syncs)
+```
+
+**Note**: If the scheme/target name differs, update it. Fix any code/config so this script succeeds.
+## Git & Monorepo Rules (Avoid Empty Syncs)
 Follow these exact rules so GitHub always gets the source:
-Work only inside pomodoro/ios-<agent-name>/. Do not modify other subfolders.
-Never use blanket ignores like * at root. Anchor patterns and keep source/metadata.
-Create two .gitignore files:
+
+### Key Rules
+1. **Work only inside your designated subfolder** - Do not modify other subfolders
+2. **Never use blanket ignores** like `*` at root - Anchor patterns and keep source/metadata
+3. **Create two .gitignore files:**
 Root pomodoro/.gitignore (monorepo-safe) — include only generic OS/IDE noise:
 # OS
 .DS_Store
