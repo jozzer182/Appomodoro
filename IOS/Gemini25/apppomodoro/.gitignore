@@ -1,0 +1,23 @@
+# Xcode user state / build products
+DerivedData/
+build/
+*.xcuserstate
+*.xcscmblueprint
+**/xcuserdata/
+
+# SwiftPM
+.swiftpm/cache/
+.swiftpm/xcode/package.cache/
+# Keep dependency lockfile
+!Package.resolved
+
+# CocoaPods (if ever used)
+Pods/
+Podfile.lock
+
+# Fastlane / artifacts
+fastlane/report.xml
+fastlane/test_output/
+
+# OS noise
+.DS_Store
