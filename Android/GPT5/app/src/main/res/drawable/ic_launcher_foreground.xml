@@ -1,0 +1,222 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:pivotX="54" android:pivotY="54">
+        <path
+            android:pathData="M54,8a46,46 0 1,1 0,92a46,46 0 1,1 0,-92"
+            android:fillColor="#00000000"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeWidth="2"
+            android:strokeAlpha="0.9" />
+        <path
+            android:pathData="M54,24a30,30 0 1,1 0,60a30,30 0 1,1 0,-60"
+            android:fillColor="#00000000"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeWidth="1.6"
+            android:strokeAlpha="0.8" />
+
+        <!-- Long ticks (every 5 seconds) -->
+        <!-- Generated manually to ensure 60 evenly spaced ticks -->
+        <group android:rotation="0" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="30" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="60" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="90" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="120" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="150" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="180" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="210" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="240" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="270" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="300" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="330" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,18" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="2.4" android:strokeLineCap="round" />
+        </group>
+
+        <!-- Short ticks (remaining seconds) -->
+        <group android:rotation="6" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="12" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="18" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="24" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="36" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="42" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="48" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="54" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="66" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="72" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="78" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="84" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="96" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="102" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="108" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="114" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="126" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="132" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="138" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="144" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="156" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="162" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="168" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="174" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="186" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="192" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="198" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="204" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="216" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="222" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="228" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="234" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="246" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="252" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="258" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="264" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="276" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="282" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="288" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="294" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="306" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="312" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="318" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="324" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="336" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="342" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="348" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+        <group android:rotation="354" android:pivotX="54" android:pivotY="54">
+            <path android:pathData="M54,8 L54,14" android:strokeColor="@color/ic_launcher_accent" android:strokeWidth="1.4" android:strokeLineCap="round" />
+        </group>
+
+        <path
+            android:pathData="M40,40a14,14 0 1,1 28,0a14,14 0 1,1 -28,0"
+            android:fillColor="#1AFFFFFF"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeWidth="1.2"
+            android:strokeAlpha="0.5" />
+    </group>
+
+    <path
+        android:pathData="M80,48a8,6 0 1,1 0,12a8,6 0 1,1 0,-12"
+        android:fillColor="@color/ic_launcher_accent"
+        android:fillAlpha="0.9" />
+
+    <path
+        android:pathData="M54,50a4,4 0 1,1 0,8a4,4 0 1,1 0,-8"
+        android:fillColor="@color/ic_launcher_accent"
+        android:fillAlpha="0.8" />
+</vector>
