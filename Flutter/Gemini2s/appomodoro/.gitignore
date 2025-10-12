@@ -1,0 +1,24 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub-cache/
+build/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Pods/
+macos/Pods/
+**/DerivedData/
+
+# Secrets/keys
+*.keystore
+*.jks
+*.p12
+*.mobileprovision
+*.xcuserstate
+**/xcuserdata/
+.env
+*.env
+
+# OS/IDE noise
+.DS_Store
+.idea/
