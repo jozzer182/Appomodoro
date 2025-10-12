@@ -1,0 +1,25 @@
+# Gradle/Build
+.gradle/
+build/
+*/build/
+captures/
+*.iml
+local.properties
+
+# Keystores/Secrets
+*.keystore
+*.jks
+keystore.properties
+.env
+*.env
+
+# OS/IDE noise
+.DS_Store
+.idea/caches/
+.idea/workspace.xml
+.idea/libraries/
+.idea/modules.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.externalNativeBuild
+.cxx

@@ -1,0 +1,107 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Outer ring -->
+    <path
+        android:pathData="M54,54m-38,0a38,38 0,1,1 76,0a38,38 0,1,1 -76,0"
+        android:strokeWidth="2"
+        android:strokeColor="@color/ic_launcher_accent"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"/>
+    
+    <!-- Inner ring -->
+    <path
+        android:pathData="M54,54m-26,0a26,26 0,1,1 52,0a26,26 0,1,1 -52,0"
+        android:strokeWidth="1.5"
+        android:strokeColor="@color/ic_launcher_accent"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"/>
+    
+    <!-- Outer ticks (every 15 degrees = 24 total, emphasize every 5th = 90 degrees) -->
+    <group>
+        <!-- Major tick at 12 o'clock -->
+        <path
+            android:pathData="M54,18 L54,24"
+            android:strokeWidth="2.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <!-- Major tick at 3 o'clock -->
+        <path
+            android:pathData="M90,54 L84,54"
+            android:strokeWidth="2.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <!-- Major tick at 6 o'clock -->
+        <path
+            android:pathData="M54,90 L54,84"
+            android:strokeWidth="2.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <!-- Major tick at 9 o'clock -->
+        <path
+            android:pathData="M18,54 L24,54"
+            android:strokeWidth="2.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <!-- Minor ticks (sampling) -->
+        <path
+            android:pathData="M67.5,21 L65,23"
+            android:strokeWidth="1.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <path
+            android:pathData="M87,40.5 L85,43"
+            android:strokeWidth="1.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <path
+            android:pathData="M87,67.5 L85,65"
+            android:strokeWidth="1.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <path
+            android:pathData="M67.5,87 L65,85"
+            android:strokeWidth="1.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <path
+            android:pathData="M40.5,87 L43,85"
+            android:strokeWidth="1.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <path
+            android:pathData="M21,67.5 L23,65"
+            android:strokeWidth="1.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <path
+            android:pathData="M21,40.5 L23,43"
+            android:strokeWidth="1.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+        
+        <path
+            android:pathData="M40.5,21 L43,23"
+            android:strokeWidth="1.5"
+            android:strokeColor="@color/ic_launcher_accent"
+            android:strokeLineCap="round"/>
+    </group>
+    
+    <!-- Small oval badge at right side -->
+    <path
+        android:pathData="M73,54m-6,0a6,3.5 0,1,1 12,0a6,3.5 0,1,1 -12,0"
+        android:fillColor="@color/ic_launcher_accent"/>
+</vector>
