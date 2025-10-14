@@ -1,0 +1,32 @@
+name: appomodoro
+description: "Pomodoro timer with mechanical concentric rings dial."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.3.2
+  flutter_local_notifications: ^18.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+  image: ^4.1.7
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: assets/icons/appicon_1024.png
+  adaptive_icon_background: "#111214"
+  adaptive_icon_foreground: assets/icons/appicon_1024.png
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
